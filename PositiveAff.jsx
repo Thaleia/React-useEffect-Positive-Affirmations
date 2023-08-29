@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 const Affirmation = ({ randomMax }) => {
-  const [randomNumber, setRandomNumber] = useState(
-    Math.floor(Math.random() * randomMax) + 1
-  );
+  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * randomMax) + 1);
+  console.log("Refresh random number:", randomNumber);
   const [affirmation, setAffirmation] = useState();
 
   useEffect(() => {
     switch (randomNumber) {
         case 1:
-          setAffirmation("When I forgive myself, I free myself.");
+          setAffirmation("When I forgive myself, I free myself!");
           break;
         case 2:
           setAffirmation("I am loved just for being who I am, just for existing.");
@@ -33,7 +32,7 @@ const Affirmation = ({ randomMax }) => {
           setAffirmation("My perspective is unique. It's important and it counts.");
           break;
         case 9:
-          setAffirmation("I am loved and worthy.");
+          setAffirmation("I am loved and worthy!");
           break;
         case 10:
           setAffirmation("I strive for joy, not for perfection");
@@ -45,7 +44,7 @@ const Affirmation = ({ randomMax }) => {
 
   const generateRandomAffirmation = () => {
     const newRandomNumber = Math.floor(Math.random() * randomMax) + 1;
-    console.log("New random number:", newRandomNumber);
+    console.log("New random number from button:", newRandomNumber);
     setRandomNumber(newRandomNumber);
   };
 
