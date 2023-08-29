@@ -9,7 +9,7 @@ const Affirmation = ({ randomMax }) => {
   useEffect(() => {
     switch (randomNumber) {
         case 1:
-          setAffirmation("I am in the right place at the right time, doing the right thing.");
+          setAffirmation("When I forgive myself, I free myself.");
           break;
         case 2:
           setAffirmation("I am loved just for being who I am, just for existing.");
@@ -24,22 +24,22 @@ const Affirmation = ({ randomMax }) => {
           setAffirmation("I am good enough!");
           break;
         case 6:
-          setAffirmation("This is a perfect moment.");
+          setAffirmation("I am still learning so it’s okay to make mistakes.");
           break;
         case 7:
-          setAffirmation("My life is about to be incredible!");
+          setAffirmation("I invite abundance and a generous heart.");
           break;
         case 8:
           setAffirmation("My perspective is unique. It's important and it counts.");
           break;
         case 9:
-          setAffirmation("Every day above Earth is a good day.");
+          setAffirmation("I am loved and worthy.");
           break;
         case 10:
-          setAffirmation("The secret of attraction is to love yourself");
+          setAffirmation("I strive for joy, not for perfection");
           break;
         default:
-          setAffirmation("I am the greatest. I said that even before I knew I was.");
+          setAffirmation("There is growth in stillness.");
       }
   }, [randomNumber]);
 
