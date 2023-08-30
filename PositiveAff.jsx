@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+// inside the arrow function there are:
 const Affirmation = ({ randomMax }) => {
+  // a useState to randomize a number
   const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * randomMax) + 1);
   console.log("Refresh random number:", randomNumber);
-  const [affirmation, setAffirmation] = useState();
+  // a useState for each affirmation
+  const [affirmation, setAffirmation] = useState('');
 
   useEffect(() => {
     switch (randomNumber) {
@@ -35,12 +37,13 @@ const Affirmation = ({ randomMax }) => {
           setAffirmation("I am loved and worthy!");
           break;
         case 10:
-          setAffirmation("I strive for joy, not for perfection");
+          setAffirmation("I strive for joy, not for perfection.");
           break;
         default:
           setAffirmation("There is growth in stillness.");
       }
-  }, [randomNumber]);
+  }, [randomNumber]); // <- it renders the affirmation side-effect once
+// arrow function for button. Uses newRadomNumber const in existing useState setRandomNumber
 
   const generateRandomAffirmation = () => {
     const newRandomNumber = Math.floor(Math.random() * randomMax) + 1;
@@ -49,11 +52,12 @@ const Affirmation = ({ randomMax }) => {
   };
 
   return (
-    <div className="greeting">
-      <h1>My Affirmations</h1>
-      <h2 className="message">{affirmation}</h2>
-      <button onClick={generateRandomAffirmation}>New Affirmation</button>
+    <>
+    <div className="affirmation">
+      <h2>{affirmation}</h2>
     </div>
+    <button onClick={generateRandomAffirmation}>New Affirmation</button>
+    </>
   );
 };
 
