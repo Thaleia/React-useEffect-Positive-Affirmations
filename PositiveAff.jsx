@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // inside the arrow function there are:
 const Affirmation = ({ randomMax }) => {
   // a useState to randomize a number
@@ -7,7 +7,7 @@ const Affirmation = ({ randomMax }) => {
   // a useState for each affirmation
   const [affirmation, setAffirmation] = useState('');
 
-  useEffect(() => {
+  React.useEffect(() => {
     switch (randomNumber) {
         case 1:
           setAffirmation("When I forgive myself, I free myself!");
