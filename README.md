@@ -8,7 +8,6 @@ The styling of this app is beautiful and stylish especially upon hovering on the
 
 Hope you enjoy using my new app! 
 
-<img width="863" alt="Screenshot 2023-08-31 at 09 04 45" src="https://github.com/Thaleia/React-useEffect-Positive-Affirmations/assets/42918656/3e9d9d4d-5fc6-4774-af5c-5b9c1d7a8ff5">
+<img width="926" alt="Screenshot 2023-09-04 at 23 54 07" src="https://github.com/Thaleia/React-useEffect-Positive-Affirmations/assets/42918656/589c8029-85eb-41e6-9c47-c95cea6ed283">
 
-<img width="865" alt="Screenshot 2023-08-31 at 09 04 12" src="https://github.com/Thaleia/React-useEffect-Positive-Affirmations/assets/42918656/e84dcfad-48da-4842-bc33-808b813906ec">
 
