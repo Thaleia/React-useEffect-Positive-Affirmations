@@ -7,6 +7,24 @@ const Affirmation = ({ randomMax }) => {
   // a useState for each affirmation
   const [affirmation, setAffirmation] = useState('');
 
+  const generateRandomAffirmation = () => {
+    const newRandomNumber = Math.floor(Math.random() * randomMax) + 1;
+    console.log("New random number from button:", newRandomNumber);
+    setRandomNumber(newRandomNumber);
+  };
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      const newRandomNumber = Math.floor(Math.random() * randomMax) + 1;
+      console.log("New random number from interval:", newRandomNumber);
+      setRandomNumber(newRandomNumber);
+    }, 4000); // Change affirmation every 4 seconds
+
+    return () => {
+      clearInterval(interval); // Cleanup on unmount to prevent memory leaks
+    };
+  }, [randomMax]);
+
   React.useEffect(() => {
     switch (randomNumber) {
         case 1:
@@ -44,12 +62,6 @@ const Affirmation = ({ randomMax }) => {
       }
   }, [randomNumber]); // <- it renders the affirmation side-effect once
 // arrow function for button. Uses newRadomNumber const in existing useState setRandomNumber
-
-  const generateRandomAffirmation = () => {
-    const newRandomNumber = Math.floor(Math.random() * randomMax) + 1;
-    console.log("New random number from button:", newRandomNumber);
-    setRandomNumber(newRandomNumber);
-  };
 
   return (
     <>
