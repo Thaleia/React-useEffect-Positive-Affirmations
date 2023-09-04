@@ -11,7 +11,7 @@
 
     color: #224;
     background:
-      url(river.jpg)
+      url("https://images.unsplash.com/photo-1504567961542-e24d9439a724?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80")
       center / cover no-repeat fixed;
   }
   
@@ -27,18 +27,21 @@
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
   }
   
   button {
-    color: white;
+    color: #224;
+    text-shadow: 1px 1px white;
     margin: 10px auto;
     display: block;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    /* border: 1px solid rgba(255, 255, 255, 0.25); */
+    border: transparent;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(15px);
+    /* background-color: rgba(255, 255, 255, 0.45); */
+    background-color: transparent;
+    /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25); */
+    /* backdrop-filter: blur(15px); */
     padding-inline: 30px;
     padding-block: 10px;
     font: 1em/1.618 sacramento;
@@ -72,10 +75,10 @@
   }
 
   h3 {
-    margin-bottom: 20px;
+    text-shadow: 1px 1px white;
+    margin-bottom: 40px;
     margin-top: 0;
     padding: 0;    
     text-align: center;
-    color: white;
   }
   
